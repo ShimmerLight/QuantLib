@@ -1,5 +1,4 @@
 image:
-  - Visual Studio 2013
   - Visual Studio 2015
   - Visual Studio 2017
   - Visual Studio 2019
@@ -15,14 +14,6 @@ build:
   verbosity: normal
 
 for:
--
-  matrix:
-    only:
-      - image: Visual Studio 2013
-  before_build:
-    - COPY .appveyor\VS2013.props .\Build.props
-  test_script:
-    - .\test-suite\bin\QuantLib-test-suite-x64-mt.exe --log_level=message --build_info=yes
 -
   matrix:
     only:
